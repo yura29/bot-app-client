@@ -32,7 +32,7 @@ const SubscribePage = () => {
     const fetchSchedule = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('/api/schedule');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/schedule`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -96,7 +96,7 @@ const SubscribePage = () => {
     }
 
     try {
-      const response = await fetch('/api/subscribe', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/subscribe`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

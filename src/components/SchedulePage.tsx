@@ -47,7 +47,7 @@ const SchedulePage = () => {
 
     const fetchSchedule = async () => {
       try {
-        const response = await fetch('/api/schedule');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/schedule`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
