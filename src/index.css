@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Onest Font */
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest/Onest-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Bebas Neue Font */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./fonts/Bebas/BebasNeue Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./fonts/Bebas/BebasNeue Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./fonts/Bebas/BebasNeue Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./fonts/Bebas/BebasNeue Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./fonts/Bebas/BebasNeue Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  background: var(--tg-theme-bg-color);
+  font-family: 'Onest', sans-serif;
+}
+
+.giest-mono {
+  font-family: "Giest", monospace;
+}
+/* Добавление стилей для корректного переноса текста */
+ 
+
+/* Можно добавить дополнительные правила для улучшения восприятия */
+
+@keyframes subtle-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+  }
+}
+
+.animate-subtle-glow {
+  animation: subtle-glow 2s infinite alternate;
+}
+
+@keyframes pulse-text {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+}
+
+.animate-pulse-text {
+  animation: pulse-text 2s infinite ease-in-out;
+}
+
+/* @keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee-text {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+  padding-left: 100%;
+  width: max-content;
+} */
+
