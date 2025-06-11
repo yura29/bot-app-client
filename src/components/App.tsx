@@ -42,8 +42,11 @@ const App = () => {
       const webApp = (window as any).Telegram.WebApp;
       webApp.ready();
       const initializeWebApp = () => {
-        if (!webApp.isFullscreen) {
-          webApp.requestFullscreen();
+        // Вызываем requestFullscreen только для мобильных платформ
+        if (webApp.platform === 'ios' || webApp.platform === 'android') {
+          if (!webApp.isFullscreen) {
+            webApp.requestFullscreen();
+          }
         }
         // Set header and background color to a consistent base for Telegram WebApp
         webApp.setHeaderColor('#1a202c'); 
