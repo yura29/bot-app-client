@@ -7,13 +7,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     allowedHosts: [
-      'you-festival-web.onrender.com',
+      'bot-app-server.onrender.com',
       // Добавьте сюда другие хосты, если они будут меняться или появятся
       // например, '.ngrok.io' для всех поддоменов ngrok
     ],
     proxy: {
       '/api': {
-        target: 'https://you-festival-web.onrender.com',
+        target: 'https://bot-app-server.onrender.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
