@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import SchedulePage from './SchedulePage';
-import SubscribePage from './SubscribePage';
+import FestivalInfoPage from './FestivalInfoPage';
 import NavBar from './NavBar';
 import BuyTicketPage from './BuyTicketPage';
 import AboutPage from './AboutPage';
@@ -63,41 +63,28 @@ const App = () => {
       initial={{ '--gradient-from': currentGradient.from, '--gradient-to': currentGradient.to }}
       animate={{ '--gradient-from': currentGradient.from, '--gradient-to': currentGradient.to }}
       transition={{ duration: 10, ease: "easeInOut" }} // Long, smooth transition
-      className="min-h-screen text-white flex flex-col items-center p-4 pt-32 pb-16"
+      className="min-h-screen text-white flex flex-col items-center p-4"
       style={{ backgroundImage: `linear-gradient(to bottom right, var(--gradient-from), var(--gradient-to))` }}
     >
-      {location.pathname !== '/buy-ticket' && (
-        <h1 className="relative z-10 rounded-xl mb-4">
-          <span
-            className="block text-center text-yellow-300 text-4xl md:text-5xl font-extrabold tracking-widest font-bebas-new italic"
-            style={{
-              textShadow: `
-                -2px -2px 0 #2B6CB0,
-                2px -2px 0 #2B6CB0,
-                -2px 2px 0 #2B6CB0,
-                2px 2px 0 #2B6CB0,
-                5px 5px 0 #000000
-              `
-            }}
-          >
-            ЮМУЗФЕСТ
-          </span>
-        </h1>
+      {location.pathname !== '/buy-ticket' && location.pathname !== '/info' && (
+        <img src="/images/you_full.png" alt="Ю МузФест" className="h-24 md:h-32 mb-4" />
       )}
 
       <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={
-            <SchedulePage />
-          } />
-          <Route path="/subscribe" element={
-            <SubscribePage />
-          } />
-          <Route path="/buy-ticket" element={
-            <BuyTicketPage />
-          } />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
+        <div className="flex-grow">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={
+              <SchedulePage />
+            } />
+            <Route path="/info" element={
+              <FestivalInfoPage />
+            } />
+            <Route path="/buy-ticket" element={
+              <BuyTicketPage />
+            } />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </div>
       </AnimatePresence>
 
       <NavBar />

@@ -32,9 +32,9 @@ const NavBar = () => {
         </li>
         <li className="flex-1 text-center">
           <Link
-            to="/subscribe"
+            to="/info"
             className={`flex flex-col items-center justify-center p-2 text-sm font-medium transition-colors duration-200 ${
-              location.pathname === '/subscribe' ? 'text-yellow-300' : 'text-gray-200 hover:text-yellow-300'
+              location.pathname === '/info' ? 'text-yellow-300' : 'text-gray-200 hover:text-yellow-300'
             }`}
           >
             <svg
@@ -51,7 +51,7 @@ const NavBar = () => {
                 d="M15 17v2m-2 4h4a2 2 0 002-2v-2m1-1V9a2 2 0 00-2-2H5a2 2 0 00-2 2v6m1-1V9a2 2 0 012-2h10a2 2 0 012 2v6m-4 10h2l2 2m-4-2h.01M7 15h.01M12 15h.01M17 15h.01M7 12h.01M12 12h.01M17 12h.01M7 9h.01M12 9h.01M17 9h.01"
               ></path>
             </svg>
-            Подписка
+            Информация
           </Link>
         </li>
         <li className="flex-1 text-center">

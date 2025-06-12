@@ -17,7 +17,7 @@ const BuyTicketPage = () => {
 
       <p className="text-lg uppercase mb-2 italic">музыкальный фестиваль</p>
 
-      <h2 className="text-5xl font-extrabold mb-8 text-white font-bebas-new italic"
+      <h2 className="text-5xl font-extrabold mb-8 text-white font-bebas-new italic flex items-center justify-center"
           style={{
             textShadow: `
               -2px -2px 0 #000000,
@@ -26,7 +26,7 @@ const BuyTicketPage = () => {
               2px 2px 0 #000000
             `
           }}>
-        Ю МузФест
+        <img src="/images/you.png" alt="Ю" className="h-20 mr-2" /> МузФест
       </h2>
 
       <p className="text-xl font-semibold mb-2">28 июня 2025,</p>
@@ -46,6 +46,20 @@ const BuyTicketPage = () => {
       >
         КУПИТЬ БИЛЕТ
       </a>
+
+      <div className="mt-8 text-center w-full max-w-xs mx-auto">
+        <p className="text-xl text-white font-bold mb-4">
+          Ищите актуальные промокоды
+        </p>
+        <a
+          href="https://vk.com/you_muzfest?from=groups"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[#7B46F2] text-white py-3 px-6 rounded-lg font-bold text-lg text-center hover:bg-[#8D5CEB] transition-colors shadow-lg"
+        >
+          Промокоды
+        </a>
+      </div>
 
     </motion.div>
   );
