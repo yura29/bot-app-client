@@ -31,7 +31,7 @@ const AboutPage = () => {
       молодыми талантами.
       </p>
 
-      <p className="text-xl font-onest font-bold mb-8 text-white text-justify">
+      <p className="text-xl font-onest font-bold text-white text-justify">
         Присоединяйтесь к нам, чтобы стать частью этого волшебства!
       </p>
 
