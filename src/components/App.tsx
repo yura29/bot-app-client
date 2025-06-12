@@ -49,8 +49,9 @@ const App = () => {
           }
         }
         // Set header and background color to a consistent base for Telegram WebApp
-        webApp.setHeaderColor('#1a202c'); 
-        webApp.setBackgroundColor('#1a202c'); 
+        // Removed as not supported in WebApp 6.0
+        // webApp.setHeaderColor('#1a202c'); 
+        // webApp.setBackgroundColor('#1a202c'); 
       };
       setTimeout(initializeWebApp, 300);
     }
