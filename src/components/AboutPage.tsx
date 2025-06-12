@@ -35,10 +35,6 @@ const AboutPage = () => {
         Присоединяйтесь к нам, чтобы стать частью этого волшебства!
       </p>
 
-      <p className="text-xl font-bebas italic font-bold  text-white text-right w-full pr-1">
-      - Команда ЮмузФеста
-      </p>
-
     </motion.div>
   );
 };
