@@ -63,7 +63,7 @@ const App = () => {
       initial={{ '--gradient-from': currentGradient.from, '--gradient-to': currentGradient.to }}
       animate={{ '--gradient-from': currentGradient.from, '--gradient-to': currentGradient.to }}
       transition={{ duration: 10, ease: "easeInOut" }} // Long, smooth transition
-      className="min-h-screen text-white flex flex-col items-center p-4"
+      className="min-h-screen text-white flex flex-col items-center p-4 pt-16"
       style={{ backgroundImage: `linear-gradient(to bottom right, var(--gradient-from), var(--gradient-to))` }}
     >
       {location.pathname !== '/buy-ticket' && location.pathname !== '/info' && (
